@@ -1,98 +1,98 @@
-T,_111111_
+T,_101_
 R
 B,A
-	P
-	Q,0
-		R
-		S,A
-	.Q
-	Q,1
-		R
-		S,A
-	.Q
-	Q,_
-		L
-		S,B
-	.Q
+ P
+ Q,0
+  R
+  S,A
+ .Q
+ Q,1
+  R
+  S,A
+ .Q
+ Q,_
+  L
+  S,B
+ .Q
 .B
 
 B,B
-	P
-	Q,0
-		W,_
-		L
-		S,_0_
-	.Q
-	Q,1
-		W,_
-		L
-		S,_1_
-	.Q
-	Q,_
-		_A
-	.Q
+ P
+ Q,0
+  W,_
+  L
+  S,_0_
+ .Q
+ Q,1
+  W,_
+  L
+  S,_1_
+ .Q
+ Q,_
+  _A
+ .Q
 .B
 
 B,_0_
-	P
-	Q,0
-		L
-		S,_0_
-	.Q
-	Q,1
-		L
-		S,_0_
-	.Q
-	Q,_
-		R
-		S,_02_
-	.Q
+ P
+ Q,0
+  L
+  S,_0_
+ .Q
+ Q,1
+  L
+  S,_0_
+ .Q
+ Q,_
+  R
+  S,_02_
+ .Q
 .B
 
 B,_1_
-	P
-	Q,0
-		L
-		S,_1_
-	.Q
-	Q,1
-		L
-		S,_1_
-	.Q
-	Q,_
-		R
-		S,_12_
-	.Q
+ P
+ Q,0
+  L
+  S,_1_
+ .Q
+ Q,1
+  L
+  S,_1_
+ .Q
+ Q,_
+  R
+  S,_12_
+ .Q
 .B
 
 B,_02_
-	P
-	Q,0
-		W,_
-		R
-		S,A
-	.Q
-	Q,1
-		_R
-	.Q
-	Q,_
-		_A
-	.Q
+ P
+ Q,0
+  W,_
+  R
+  S,A
+ .Q
+ Q,1
+  _R
+ .Q
+ Q,_
+  _A
+ .Q
 .B
 
 B,_12_
-	P
-	Q,0
-		_R
-	.Q
-	Q,1
-		W,_
-		R
-		S,A
-	.Q
-	Q,_
-		_A
-	.Q
+ P
+ Q,0
+  _R
+ .Q
+ Q,1
+  W,_
+  R
+  S,A
+ .Q
+ Q,_
+  _A
+ .Q
 .B
 
 S,A
