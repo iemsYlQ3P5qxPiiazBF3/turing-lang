@@ -12,13 +12,13 @@ for i in $(cat "$1"|tr ';\t ' '\n\n');do
 		echo "${i[1]}(){" >> "out$x.sh"
 		;;
 		"Q")
-		echo "$(base64 -d<<<'WyAiJHtUQVBFWyRIRUFEXX0iID09ICI=')${i[1]}$(base64 -d<<<'IiBdJiZ7')" >> "out$x.sh"
+		echo "[ \"\${TAPE[\$HEAD]}\" == \"${i[1]}\" ]&&{" >> "out$x.sh"
 		;;
 		".B"|".Q")
 		echo "}" >> "out$x.sh"
 		;;
 		"R")
-		echo "((HEAD++));((HEAD>\${#TAPE[@]}))&&TAPE=( \${TAPE[@]} 0 )" >> "out$x.sh"
+		echo "((HEAD++));((HEAD>(\${#TAPE[@]}-1)))&&TAPE=( \${TAPE[@]} 0 )" >> "out$x.sh"
 		;;
 		"L")
 		echo "((HEAD--));((HEAD<0))&&{ HEAD=0; TAPE=( 0 \${TAPE[@]} ); }" >> "out$x.sh"
