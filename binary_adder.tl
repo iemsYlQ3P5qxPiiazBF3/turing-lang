@@ -1,0 +1,30 @@
+T,00000x
+B,A
+	P
+	Q,0
+		R
+		S,A
+	.Q
+	Q,1
+		R
+		S,A
+	.Q
+	Q,x
+		L
+		S,B
+	.Q
+.B
+
+B,B
+	Q,0
+		W,1
+		S,A
+	.Q
+	Q,1
+		W,0
+		L
+		S,B
+	.Q
+.B
+
+S,A
