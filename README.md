@@ -32,9 +32,42 @@ S: State
  Run the state S,x
  
 #: Comment
- #,Comment_does_nothing
+ #,Comment_does_nothing. You can also write anything that isn't a command and it's a comment.
 
 P: Print
  Print everything on the tape
 
+T: Tape
+ The tape/input. Split by 1s (001010 -> 0 0 1 0 1 0). Do not add spaces.
+```
+
+```
+Syntax:
+
+Commands are separated by the semicolon, space, or newline.
+arguments are separated by a comma.
+
+examples:
+
+T,0101 puts 0 1 0 1 to the tape
+
+B,A creates a new state called A
+
+W,0 writes a 0 to the cell
+
+S,A runs the state A
+
+T,01
+B,A
+ Q,0
+  W,1
+  R
+  S,A
+ .Q
+ Q,1
+  _A
+ .Q
+.B
+
+This is a small program. It isn't useful. 
 ```
