@@ -20,7 +20,7 @@ L: Left
  Move one cell to the left, add another cell if the current cell is unmarked
 
 W: Write
- Writes 1 byte to the current cell
+ Writes to the current cell
 
 _A: Accept
  Accept, exit 0
