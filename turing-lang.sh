@@ -4,6 +4,7 @@ x="0"
 :>"out$x.sh"
 echo -e "TAPE=( );HEAD=0;" > "out$x.sh"
 
+
 for i in $(cat "$1"|tr ';\t ' '\n\n');do
 	i=( $(echo $i|tr ',' ' ') )
 	echo "${i[@]}"
@@ -24,8 +25,7 @@ for i in $(cat "$1"|tr ';\t ' '\n\n');do
 		echo "((HEAD--));((HEAD<0))&&{ HEAD=0; TAPE=( 0 \${TAPE[@]} ); }" >> "out$x.sh"
 		;;
 		"W")
-		v="$(echo ${i[1]}|head -c1)"
-		echo "TAPE[\$HEAD]=\"$v\"" >> "out$x.sh"
+		echo "TAPE[\$HEAD]=\"${i[1]}\"" >> "out$x.sh"
 		;;
 		"_A")
 		echo "echo \"Accepted\";exit 0" >> "out$x.sh"
