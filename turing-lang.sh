@@ -48,9 +48,3 @@ for i in $(cat "$1"|tr ';\t ' '\n\n');do
 done
 chmod +x "out$x.sh"
 ls "out$x.sh"
-
-		echo "echo \"\${TAPE[@]}\";for i in \$(seq \$HEAD);do echo -n \"  \";done;echo \"^\"" >> "out$x.sh"
-	esac
-done
-chmod +x "out$x.sh"
-ls "out$x.sh"
