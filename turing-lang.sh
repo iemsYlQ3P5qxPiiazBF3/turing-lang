@@ -37,13 +37,18 @@ for i in $(cat "$1"|tr ';\t ' '\n\n');do
 		echo "${i[1]}" >> "out$x.sh"
 		;;
 		"T")
-		v="$(echo ${i[1]}|sed 's/.\{1\}/& /g')"
-		echo "TAPE=( $v )" >> "out$x.sh"
+		echo "TAPE=( ${i[@]:1} )" >> "out$x.sh"
 		;;
 		"#")
 		echo "# ${i[1]}" >> "out$x.sh"
 		;;
 		"P")
+		echo "echo \"\${TAPE[@]}\";for i in \$(seq \$HEAD);do echo -n \"  \";done;echo \"^\"" >> "out$x.sh"
+	esac
+done
+chmod +x "out$x.sh"
+ls "out$x.sh"
+
 		echo "echo \"\${TAPE[@]}\";for i in \$(seq \$HEAD);do echo -n \"  \";done;echo \"^\"" >> "out$x.sh"
 	esac
 done
