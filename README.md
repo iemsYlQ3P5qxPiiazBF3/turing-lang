@@ -49,7 +49,7 @@ arguments are separated by a comma.
 
 examples:
 
-T,0101 puts 0 1 0 1 to the tape
+T,0,1,0,1 puts 0 1 0 1 to the tape
 
 B,A creates a new state called A
 
