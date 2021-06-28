@@ -4,9 +4,8 @@ x="0"
 :>"out$x.sh"
 echo -e "TAPE=( );HEAD=0;" > "out$x.sh"
 
-
-for i in $(cat "$1"|tr ';\t ' '\n\n');do
-	i=( $(echo $i|tr ',' ' ') )
+for i in $(cat "$1"|tr ';\t ' '\n\nÿ');do
+	i=( $(echo $i|tr ',ÿ' '  ') )
 	echo "${i[@]}"
 	case "${i[0]}" in
 		"B")
@@ -40,10 +39,11 @@ for i in $(cat "$1"|tr ';\t ' '\n\n');do
 		echo "TAPE=( ${i[@]:1} )" >> "out$x.sh"
 		;;
 		"#")
-		echo "# ${i[1]}" >> "out$x.sh"
+		echo "# ${i[@]:1}" >> "out$x.sh"
 		;;
 		"P")
 		echo "echo \"\${TAPE[@]}\";for i in \$(seq \$HEAD);do echo -n \"  \";done;echo \"^\"" >> "out$x.sh"
+		;;
 	esac
 done
 chmod +x "out$x.sh"
