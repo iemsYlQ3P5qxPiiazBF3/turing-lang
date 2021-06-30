@@ -9,7 +9,7 @@ for i in $(cat "$1"|tr ';\t ' '\n\nÿ');do
 	echo "${i[@]}"
 	case "${i[0]}" in
 		"B")
-		echo "${i[1]}(){" >> "out$x.sh"
+		echo -e "${i[1]}(){\nSTATE=\"${i[1]}\"" >> "out$x.sh"
 		;;
 		"Q")
 		echo "[ \"\${TAPE[\$HEAD]}\" == \"${i[1]}\" ]&&{" >> "out$x.sh"
@@ -42,7 +42,7 @@ for i in $(cat "$1"|tr ';\t ' '\n\nÿ');do
 		echo "# ${i[@]:1}" >> "out$x.sh"
 		;;
 		"P")
-		echo "echo \"\${TAPE[@]}\";for i in \$(seq \$HEAD);do echo -n \"  \";done;echo \"^\"" >> "out$x.sh"
+		echo "echo \"\${TAPE[@]}; S: \$STATE\";for i in \$(seq \$HEAD);do echo -n \"  \";done;echo \"^\"" >> "out$x.sh"
 		;;
 	esac
 done
