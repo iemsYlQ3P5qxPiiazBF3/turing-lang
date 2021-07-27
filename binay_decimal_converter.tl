@@ -1,0 +1,204 @@
+T,@,1,1,1,1,1,1,1,_,0,0,0,x
+R
+B,RSHIFT
+ P
+ Q,0
+  R
+  S,RSHIFT
+ .Q
+ Q,1
+  R
+  S,RSHIFT
+ .Q
+ Q,_
+  L
+  S,BINSUB
+ .Q
+ Q,@
+  W,.
+  R
+  S,CLR
+ .Q
+.B
+
+B,BINSUB
+ P
+ Q,0
+  W,1
+  L
+  S,BINSUB
+ .Q
+ Q,1
+  W,0
+  S,RSHIFTDECADD
+ .Q
+ Q,@
+  W,.
+  R
+  S,CLR
+ .Q
+.B
+
+B,RSHIFTDECADD
+ P
+ Q,0
+  R
+  S,RSHIFTDECADD
+ .Q
+ Q,1
+  R
+  S,RSHIFTDECADD
+ .Q
+ Q,2
+  R
+  S,RSHIFTDECADD
+ .Q
+ Q,3
+  R
+  S,RSHIFTDECADD
+ .Q
+ Q,4
+  R
+  S,RSHIFTDECADD
+ .Q
+ Q,5
+  R
+  S,RSHIFTDECADD
+ .Q
+ Q,6
+  R
+  S,RSHIFTDECADD
+ .Q
+ Q,7
+  R
+  S,RSHIFTDECADD
+ .Q
+ Q,8
+  R
+  S,RSHIFTDECADD
+ .Q
+ Q,9
+  R
+  S,RSHIFTDECADD
+ .Q
+ Q,_
+  R
+  S,RSHIFTDECADD
+ .Q
+ Q,x
+  L
+  S,DECADD
+ .Q
+.B
+
+B,DECADD
+ P
+ Q,0
+  W,1
+  S,LSHIFT
+ .Q
+ Q,1
+  W,2
+  S,LSHIFT
+ .Q
+ Q,2
+  W,3
+  S,LSHIFT
+ .Q
+ Q,3
+  W,4
+  S,LSHIFT
+ .Q
+ Q,4
+  W,5
+  S,LSHIFT
+ .Q
+ Q,5
+  W,6
+  S,LSHIFT
+ .Q
+ Q,6
+  W,7
+  S,LSHIFT
+ .Q
+ Q,7
+  W,8
+  S,LSHIFT
+ .Q
+ Q,8
+  W,9
+  S,LSHIFT
+ .Q
+ Q,9
+  W,0
+  L
+  S,DECADD
+ .Q
+ Q,_
+  _A
+ .Q
+.B
+
+B,LSHIFT
+ P
+ Q,0
+  L
+  S,LSHIFT
+ .Q
+ Q,1
+  L
+  S,LSHIFT
+ .Q
+ Q,2
+  L
+  S,LSHIFT
+ .Q
+ Q,3
+  L
+  S,LSHIFT
+ .Q
+ Q,4
+  L
+  S,LSHIFT
+ .Q
+ Q,5
+  L
+  S,LSHIFT
+ .Q
+ Q,6
+  L
+  S,LSHIFT
+ .Q
+ Q,7
+  L
+  S,LSHIFT
+ .Q
+ Q,8
+  L
+  S,LSHIFT
+ .Q
+ Q,9
+  L
+  S,LSHIFT
+ .Q
+ Q,_
+  L
+  S,RSHIFT
+ .Q
+.B
+
+B,CLR
+ P
+ Q,1
+  W,.
+  R
+  S,CLR
+ .Q
+ Q,_
+  W,.
+  P
+  _A
+ .Q
+.B
+
+S,RSHIFT
